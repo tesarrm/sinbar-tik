@@ -1,11 +1,11 @@
 <template>
 	<div>
-		<UpcomingEvaluations
+		<!-- <UpcomingEvaluations
 			:batch="batch.data.name"
 			:endDate="batch.data.evaluation_end_date"
 			:courses="batch.data.courses"
 			:isStudent="isStudent"
-		/>
+		/> -->
 		<Assessments :batch="batch.data.name" />
 	</div>
 </template>

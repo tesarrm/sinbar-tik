@@ -62,9 +62,9 @@
 							<div v-else-if="tab.label == 'Dashboard'">
 								<BatchDashboard :batch="batch" :isStudent="isStudent" />
 							</div>
-							<div v-else-if="tab.label == 'Live Class'">
+							<!-- <div v-else-if="tab.label == 'Live Class'">
 								<LiveClass :batch="batch.data.name" />
-							</div>
+							</div> -->
 							<div v-else-if="tab.label == 'Students'">
 								<BatchStudents :batch="batch.data.name" />
 							</div>
@@ -276,10 +276,10 @@ const tabs = computed(() => {
 			icon: BookOpenCheck,
 		})
 	}
-	batchTabs.push({
-		label: 'Live Class',
-		icon: Laptop,
-	})
+	// batchTabs.push({
+	// 	label: 'Live Class',
+	// 	icon: Laptop,
+	// })
 	batchTabs.push({
 		label: 'Courses',
 		icon: BookOpen,

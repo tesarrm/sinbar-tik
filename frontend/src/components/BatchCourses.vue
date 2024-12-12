@@ -112,20 +112,20 @@ const openCourseModal = () => {
 const getCoursesColumns = () => {
 	return [
 		{
-			label: 'Title',
+			label: 'Judul',
 			key: 'title',
 			width: 2,
 		},
 		{
-			label: 'Lessons',
+			label: 'Materi',
 			key: 'lesson_count',
 			align: 'right',
 		},
-		{
-			label: 'Enrollments',
-			align: 'right',
-			key: 'enrollment_count',
-		},
+		// {
+		// 	label: 'Enrollments',
+		// 	align: 'right',
+		// 	key: 'enrollment_count',
+		// },
 	]
 }
 
