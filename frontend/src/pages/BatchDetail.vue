@@ -8,7 +8,7 @@
 				<div class="text-3xl font-semibold">
 					{{ batch.data.title }}
 				</div>
-				<div class="my-3">
+				<div class="my-3 leading-6">
 					{{ batch.data.description }}
 				</div>
 				<div

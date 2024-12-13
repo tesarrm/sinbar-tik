@@ -20,7 +20,7 @@
 		</div> -->
 		<div class="space-y-2">
 			<div
-				class="flex items-center text-sm font-medium space-x-2"
+				class="flex items-center text-sm font-medium space-x-2 leading-5"
 			>
 				<span>
 					{{ __('How to add a Quiz?') }}
@@ -55,7 +55,7 @@
 		</div> -->
 		<div class="space-y-2">
 			<div
-				class="flex text-sm font-medium space-x-2"
+				class="flex text-sm font-medium space-x-2 leading-5"
 			>
 				<span class="leading-5">
 					{{ __(contentMap['upload']) }}
@@ -90,7 +90,7 @@
 		</div> -->
 		<div class="space-y-2">
 			<div
-				class="flex items-center text-sm font-medium space-x-2 cursor-pointer"
+				class="flex items-center text-sm font-medium space-x-2 leading-5"
 			>
 				<span>
 					{{ __(contentMap['youtube']) }}
@@ -106,7 +106,7 @@
 		</div>
 
 		<div class="space-y-2">
-			<div class="flex items-center text-sm font-medium space-x-2">
+			<div class="flex items-center text-sm font-medium space-x-2 leading-5">
 				<span>
 					{{ __('What does include in preview mean?') }}
 				</span>
