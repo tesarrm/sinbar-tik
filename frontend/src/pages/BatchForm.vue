@@ -119,7 +119,7 @@
 				</div>
 				<div class="grid grid-cols-2 gap-10">
 					<div>
-						<FormControl
+						<!-- <FormControl
 							v-model="batch.start_date"
 							:label="__('Start Date')"
 							type="date"
@@ -132,10 +132,22 @@
 							type="date"
 							class="mb-4"
 							:required="true"
+						/> -->
+						<FormControl
+							v-model="batch.start_date"
+							:label="__('Start Date')"
+							type="date"
+							class="mb-4"
+						/>
+						<FormControl
+							v-model="batch.end_date"
+							:label="__('End Date')"
+							type="date"
+							class="mb-4"
 						/>
 					</div>
 					<div>
-						<FormControl
+						<!-- <FormControl
 							v-model="batch.start_time"
 							:label="__('Start Time')"
 							type="time"
@@ -156,6 +168,25 @@
 							:placeholder="__('Example: IST (+5:30)')"
 							class="mb-4"
 							:required="true"
+						/> -->
+						<FormControl
+							v-model="batch.start_time"
+							:label="__('Start Time')"
+							type="time"
+							class="mb-4"
+						/>
+						<FormControl
+							v-model="batch.end_time"
+							:label="__('End Time')"
+							type="time"
+							class="mb-4"
+						/>
+						<FormControl
+							v-model="batch.timezone"
+							:label="__('Timezone')"
+							type="text"
+							:placeholder="__('Example: IST (+5:30)')"
+							class="mb-4"
 						/>
 					</div>
 				</div>

@@ -22,13 +22,17 @@
 						>&middot;</span
 					>
 					<DateRange
+						v-if="batch.data.start_date && batch.data.end_date"
 						:startDate="batch.data.start_date"
 						:endDate="batch.data.end_date"
 					/>
 					<span class="hidden lg:block" v-if="batch.data.start_date"
 						>&middot;</span
 					>
-					<div class="flex items-center">
+					<div
+						v-if="batch.data.start_time && batch.data.end_time"
+						class="flex items-center"
+					>
 						<Clock class="h-4 w-4 text-gray-700 mr-2" />
 						<span>
 							{{ formatTime(batch.data.start_time) }} -
