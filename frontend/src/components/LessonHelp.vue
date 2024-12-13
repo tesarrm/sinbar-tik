@@ -1,6 +1,6 @@
 <template>
 	<div class="space-y-5">
-		<div class="space-y-2">
+		<!-- <div class="space-y-2">
 			<div
 				class="flex items-center text-sm font-medium space-x-2 cursor-pointer"
 				@click="openHelpDialog('quiz')"
@@ -17,9 +17,25 @@
 					)
 				}}
 			</div>
+		</div> -->
+		<div class="space-y-2">
+			<div
+				class="flex items-center text-sm font-medium space-x-2"
+			>
+				<span>
+					{{ __('How to add a Quiz?') }}
+				</span>
+			</div>
+			<div class="text-xs text-gray-600 mb-1 leading-5">
+				{{
+					__(
+						'Click on the add icon in the editor and select Quiz from the menu. It opens up a dialog, where you can either select a quiz from the list or create a new quiz. When you select the Create New option it redirects you to the quiz creation page.'
+					)
+				}}
+			</div>
 		</div>
 
-		<div class="space-y-2">
+		<!-- <div class="space-y-2">
 			<div
 				class="flex text-sm font-medium space-x-2 cursor-pointer"
 				@click="openHelpDialog('upload')"
@@ -36,9 +52,25 @@
 					)
 				}}
 			</div>
+		</div> -->
+		<div class="space-y-2">
+			<div
+				class="flex text-sm font-medium space-x-2"
+			>
+				<span class="leading-5">
+					{{ __(contentMap['upload']) }}
+				</span>
+			</div>
+			<div class="text-xs text-gray-600 mb-1 leading-5">
+				{{
+					__(
+						'To upload Image, Video, Audio or PDF from your system, click on the add icon and select upload from the menu. Then choose the file you want to add to the lesson and it gets added to your lesson.'
+					)
+				}}
+			</div>
 		</div>
 
-		<div class="space-y-2">
+		<!-- <div class="space-y-2">
 			<div
 				class="flex items-center text-sm font-medium space-x-2 cursor-pointer"
 				@click="openHelpDialog('youtube')"
@@ -47,6 +79,22 @@
 					{{ __(contentMap['youtube']) }}
 				</span>
 				<Info class="w-3 h-3 text-gray-700" />
+			</div>
+			<div class="text-xs text-gray-600 mb-1 leading-5">
+				{{
+					__(
+						'Copy the URL of the video from YouTube and paste it in the editor.'
+					)
+				}}
+			</div>
+		</div> -->
+		<div class="space-y-2">
+			<div
+				class="flex items-center text-sm font-medium space-x-2 cursor-pointer"
+			>
+				<span>
+					{{ __(contentMap['youtube']) }}
+				</span>
 			</div>
 			<div class="text-xs text-gray-600 mb-1 leading-5">
 				{{
@@ -84,8 +132,10 @@ const type = ref(null)
 const title = ref(null)
 const contentMap = {
 	quiz: 'How to add a Quiz?',
-	upload: 'How to upload content from your system?',
-	youtube: 'How to add a YouTube Video?',
+	// upload: 'How to upload content from your system?',
+	upload: 'Bagaimana cara mengunggah konten dari sistem Anda?',
+	// youtube: 'How to add a YouTube Video?',
+	youtube: 'Bagaimana cara menambahkan Video YouTube?',
 }
 
 const openHelpDialog = (contentType) => {
