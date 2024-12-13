@@ -195,7 +195,7 @@ const checkLearningPath = () => {
 		settings.learningPaths.data &&
 		(!user.data?.is_moderator || !user.data?.is_instructor)
 	) {
-		router.push({ name: 'Programs' })
+		router.push({ name: 'Batches' })
 	}
 }
 
