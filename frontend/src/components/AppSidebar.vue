@@ -117,6 +117,27 @@ const pageToEdit = ref(null)
 const showWebPages = ref(false)
 const settingsStore = useSettings()
 
+// onMounted(() => {
+// 	socket.on('publish_lms_notifications', (data) => {
+// 		unreadNotifications.reload()
+// 	})
+// 	addNotifications()
+// 	sidebarSettings.reload(
+// 		{},
+// 		{
+// 			onSuccess(data) {
+// 				Object.keys(data).forEach((key) => {
+// 					if (!parseInt(data[key])) {
+// 						sidebarLinks.value = sidebarLinks.value.filter(
+// 							(link) => link.label.toLowerCase().split(' ').join('_') !== key
+// 						)
+// 					}
+// 				})
+// 			},
+// 		}
+// 	)
+// })
+
 onMounted(() => {
 	socket.on('publish_lms_notifications', (data) => {
 		unreadNotifications.reload()
@@ -126,12 +147,21 @@ onMounted(() => {
 		{},
 		{
 			onSuccess(data) {
+				// Filter sidebar links berdasarkan settings
 				Object.keys(data).forEach((key) => {
 					if (!parseInt(data[key])) {
 						sidebarLinks.value = sidebarLinks.value.filter(
 							(link) => link.label.toLowerCase().split(' ').join('_') !== key
 						)
 					}
+				})
+
+				// Tambahkan logika untuk menyaring "Courses"
+				sidebarLinks.value = sidebarLinks.value.filter((link) => {
+					if (link.label === 'Courses') {
+						return isInstructor.value || isModerator.value
+					}
+					return true
 				})
 			},
 		}
