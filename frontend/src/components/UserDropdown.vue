@@ -105,7 +105,7 @@ watch(
 const userDropdownOptions = [
 	{
 		icon: User,
-		label: 'My Profile',
+		label: 'Profil Saya',
 		onClick: () => {
 			router.push(`/user/${userResource.data?.username}`)
 		},
@@ -113,18 +113,18 @@ const userDropdownOptions = [
 			return isLoggedIn
 		},
 	},
-	{
-		component: markRaw(Apps),
-		condition: () => {
-			let cookies = new URLSearchParams(document.cookie.split('; ').join('&'))
-			let system_user = cookies.get('system_user')
-			if (system_user === 'yes') return true
-			else return false
-		},
-	},
+	// {
+	// 	component: markRaw(Apps),
+	// 	condition: () => {
+	// 		let cookies = new URLSearchParams(document.cookie.split('; ').join('&'))
+	// 		let system_user = cookies.get('system_user')
+	// 		if (system_user === 'yes') return true
+	// 		else return false
+	// 	},
+	// },
 	{
 		icon: Settings,
-		label: 'Settings',
+		label: 'Pengaturan',
 		onClick: () => {
 			settingsStore.isSettingsOpen = true
 		},
