@@ -139,7 +139,8 @@ const markAllAsRead = createResource({
 const breadcrumbs = computed(() => {
 	let crumbs = [
 		{
-			label: 'Notifications',
+			// label: 'Notifications',
+			label: 'Notifikasi',
 			route: {
 				name: 'Notifications',
 			},

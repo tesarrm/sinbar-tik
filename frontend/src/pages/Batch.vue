@@ -5,12 +5,12 @@
 		>
 			<Breadcrumbs class="h-7" :items="breadcrumbs" />
 			<div class="flex items-center space-x-2">
-				<Button
+				<!-- <Button
 					v-if="user.data?.is_moderator"
 					@click="openCertificateDialog = true"
 				>
 					{{ __('Generate Certificates') }}
-				</Button>
+				</Button> -->
 				<Button v-if="user.data?.is_moderator" @click="openAnnouncementModal()">
 					<span>
 						{{ __('Make an Announcement') }}
