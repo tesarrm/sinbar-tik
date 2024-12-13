@@ -18,14 +18,19 @@
 					<div class="w-5/6 mx-auto">
 						<FormControl
 							v-model="lesson.title"
-							label="Title"
+							label="Judul"
 							class="mb-4"
 							:required="true"
 						/>
-						<FormControl
+						<!-- <FormControl
 							v-model="lesson.include_in_preview"
 							type="checkbox"
 							label="Include in Preview"
+						/> -->
+						<FormControl
+							v-model="lesson.include_in_preview"
+							type="checkbox"
+							label="Sertakan dalam Pratinjau"
 						/>
 					</div>
 					<div class="border-t mt-4">
@@ -457,7 +462,7 @@ const showToast = (title, text, icon) => {
 const breadcrumbs = computed(() => {
 	let crumbs = [
 		{
-			label: 'Courses',
+			label: 'Mapel',
 			route: { name: 'Courses' },
 		},
 		{
@@ -480,7 +485,7 @@ const breadcrumbs = computed(() => {
 		})
 	}
 	crumbs.push({
-		label: lessonDetails?.data?.lesson ? 'Edit Lesson' : 'Create Lesson',
+		label: lessonDetails?.data?.lesson ? 'Ubah Materi' : 'Buat Materi',
 		route: {
 			name: 'LessonForm',
 			params: {
