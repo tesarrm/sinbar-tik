@@ -16,8 +16,8 @@
 	>
 		<template #body-content>
 			<div class="space-y-4 text-base">
-				<FormControl label="Title" v-model="chapter.title" :required="true" />
-				<Switch
+				<FormControl label="Judul" v-model="chapter.title" :required="true" />
+				<!-- <Switch
 					size="sm"
 					:label="__('SCORM Package')"
 					:description="
@@ -63,7 +63,7 @@
 							/>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</template>
 	</Dialog>
