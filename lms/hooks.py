@@ -17,6 +17,8 @@ app_license = "AGPL"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/lms/css/lms.css"
 # app_include_js = "/assets/lms/js/lms.js"
+app_include_css = "/assets/lms/css/lms.css"
+# app_include_css = "/assets/lms/css/sundae_theme.bundle.css"
 
 # include js, css files in header of web template
 web_include_css = "lms.bundle.css"
@@ -128,6 +130,7 @@ fixtures = ["Custom Field", "Function", "Industry", "LMS Category"]
 #
 override_whitelisted_methods = {
 	# "frappe.desk.search.get_names_for_mentions": "lms.lms.utils.get_names_for_mentions",
+    "frappe.core.doctype.user.user.switch_theme": "lms.overrides.switch_theme.switch_theme"
 }
 #
 # each overriding function accepts a `data` argument;

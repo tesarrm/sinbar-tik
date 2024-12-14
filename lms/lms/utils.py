@@ -1316,8 +1316,8 @@ def categorize_batches(batches):
 				enrolled.append(batch)
 
 	categories = [archived, private, enrolled]
-	for category in categories:
-		category.sort(key=lambda x: x.start_date, reverse=True)
+	# for category in categories:
+	# 	category.sort(key=lambda x: x.start_date, reverse=True)
 
 	upcoming.sort(key=lambda x: x.start_date)
 	return {

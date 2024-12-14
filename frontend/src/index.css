@@ -1,2 +1,10 @@
 @import './assets/Inter/inter.css';
 @import 'frappe-ui/src/style.css';
+
+:root {
+    --surface-gray-7: #56cc99;
+}
+
+.bg-surface-gray-7 {
+    background-color: #56cc99 !important;
+}

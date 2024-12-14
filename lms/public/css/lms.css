@@ -1,0 +1,29 @@
+/* [data-theme=modern_ui_theme]{
+    --primary: var(--main-color);
+    --dt-primary-color: var(--main-color);
+    --blue-avatar-bg: var(--main-color);
+    --blue-avatar-color: var(--main-color);
+    --blue: var(--main-color)
+} */
+[data-theme="modern_ui_theme"] {
+    /* --primary: red; */
+    --btn-primary: #56cc99;
+    --border-primary: #56cc99;
+    --primary-color: #56cc99;
+    /* --subtle-accent: #F4FBFF;
+    --control-bg: #F4FBFF;
+    --subtle-fg: #F4FBFF; */
+    /* --dt-primary-color: red;
+    --blue-avatar-bg: red;
+    --blue-avatar-color: red;
+    --blue: red; */
+}
+
+/* portal */
+:root {
+    --surface-gray-7: #56cc99;
+}
+
+.bg-surface-gray-7 {
+    background-color: #56cc99 !important;
+}
