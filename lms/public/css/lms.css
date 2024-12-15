@@ -5,7 +5,7 @@
     --blue-avatar-color: var(--main-color);
     --blue: var(--main-color)
 } */
-[data-theme="modern_ui_theme"] {
+[data-theme="light"] {
     /* --primary: red; */
     --btn-primary: #56cc99;
     --border-primary: #56cc99;
