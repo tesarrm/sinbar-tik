@@ -29,10 +29,6 @@ export default defineConfig({
 		target: 'es2015',
 		rollupOptions: {
 			output: {
-				// Menentukan nama file untuk file entry dan chunk
-				entryFileNames: '[name].js',
-				chunkFileNames: '[name].js',
-				assetFileNames: '[name][extname]',
 				manualChunks: {
 					'frappe-ui': ['frappe-ui'],
 				},
